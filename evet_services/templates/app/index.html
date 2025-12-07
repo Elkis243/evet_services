@@ -1,0 +1,350 @@
+{% extends 'base.html' %} {% load static %} {% block extra_css %} {{ block.super }}
+<link href="{% static 'css/index.css' %}" rel="stylesheet" />
+{% endblock extra_css %} {% block base %} {% include 'components/navbar.html' %}
+
+<!-- Hero Section -->
+<section class="hero-section-new position-relative overflow-hidden">
+  <div class="hero-background"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-animated-shapes">
+    <div class="animated-shape shape-1"></div>
+    <div class="animated-shape shape-2"></div>
+    <div class="animated-shape shape-3"></div>
+  </div>
+
+  <div class="container position-relative">
+    <div class="row align-items-center py-4 py-md-5 min-vh-75">
+      <div class="col-lg-8 col-xl-7 mx-auto text-center" data-sal="fade-up" data-sal-duration="1000">
+        <!-- Titre principal -->
+        <h1 class="hero-title mb-4" data-sal="fade-up" data-sal-delay="300">
+          Votre partenaire en<br />
+          <span class="text-primary">commerce</span> et
+          <span class="text-primary">services</span>
+        </h1>
+        <!-- Description -->
+        <p class="hero-description" data-sal="fade-up" data-sal-delay="400">
+          EVET vous accompagne avec des solutions professionnelles adaptées à vos besoins. Excellence, fiabilité et engagement au service de votre réussite.
+        </p>
+
+        <!-- Bouton CTA -->
+        <div class="hero-cta" data-sal="fade-up" data-sal-delay="500">
+          <a href="{% url 'contact' %}" class="btn btn-primary btn-lg px-4 px-md-5 py-2 py-md-3 hero-btn-primary rounded-pill">
+            <i class="bi bi-arrow-right-circle-fill me-2 ps-2"></i>Demander un devis
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services-section-modern py-5 position-relative overflow-hidden">
+  <div class="services-background"></div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <div class="row mb-5">
+          <div class="col-lg-8 mx-auto text-center" data-sal="fade-up">
+            <span class="services-badge mb-3">Nos Services</span>
+            <h2 class="services-title mb-3">Solutions professionnelles pour votre entreprise</h2>
+            <p class="services-subtitle">Découvrez notre gamme complète de services conçus pour répondre à tous vos besoins en commerce général et prestations de service.</p>
+          </div>
+        </div>
+
+        <div class="row g-4 g-lg-5">
+          <!-- Service 1 -->
+          <div class="col-lg-4 col-md-6" data-sal="fade-up" data-sal-delay="100">
+            <div class="service-card-modern h-100 position-relative">
+              <div class="service-card-inner">
+                <div class="service-number">01</div>
+                <div class="service-icon-modern">
+                  <div class="service-icon-bg"></div>
+                  <i class="bi bi-shop"></i>
+                </div>
+                <h3 class="service-title-modern">Commerce général</h3>
+                <p class="service-description">Distribution et vente de produits divers pour répondre à tous vos besoins commerciaux avec une approche professionnelle et fiable.</p>
+                <div class="service-features">
+                  <div class="service-feature-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span>Fourniture de produits</span>
+                  </div>
+                  <div class="service-feature-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span>Approvisionnement régulier</span>
+                  </div>
+                  <div class="service-feature-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span>Gestion des stocks</span>
+                  </div>
+                </div>
+                <a href="{% url 'contact' %}" class="service-link">
+                  <span>En savoir plus</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+              <div class="service-card-overlay"></div>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="col-lg-4 col-md-6" data-sal="fade-up" data-sal-delay="200">
+            <div class="service-card-modern h-100 position-relative">
+              <div class="service-card-inner">
+                <div class="service-number">02</div>
+                <div class="service-icon-modern">
+                  <div class="service-icon-bg"></div>
+                  <i class="bi bi-briefcase"></i>
+                </div>
+                <h3 class="service-title-modern">Prestations de service</h3>
+                <p class="service-description">Services professionnels sur mesure pour accompagner votre entreprise dans tous ses projets avec expertise et réactivité.</p>
+                <div class="service-features">
+                  <div class="service-feature-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span>Services sur mesure</span>
+                  </div>
+                  <div class="service-feature-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span>Support technique</span>
+                  </div>
+                  <div class="service-feature-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span>Maintenance et suivi</span>
+                  </div>
+                </div>
+                <a href="{% url 'contact' %}" class="service-link">
+                  <span>En savoir plus</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+              <div class="service-card-overlay"></div>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="col-lg-4 col-md-6" data-sal="fade-up" data-sal-delay="300">
+            <div class="service-card-modern h-100 position-relative">
+              <div class="service-card-inner">
+                <div class="service-number">03</div>
+                <div class="service-icon-modern">
+                  <div class="service-icon-bg"></div>
+                  <i class="bi bi-headset"></i>
+                </div>
+                <h3 class="service-title-modern">Conseil Professionnel</h3>
+                <p class="service-description">Expertise et accompagnement stratégique pour optimiser vos opérations et développer votre activité avec des solutions innovantes.</p>
+                <div class="service-features">
+                  <div class="service-feature-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span>Conseil stratégique</span>
+                  </div>
+                  <div class="service-feature-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span>Accompagnement personnalisé</span>
+                  </div>
+                  <div class="service-feature-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span>Solutions innovantes</span>
+                  </div>
+                </div>
+                <a href="{% url 'contact' %}" class="service-link">
+                  <span>En savoir plus</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+              <div class="service-card-overlay"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section-modern py-5 position-relative overflow-hidden">
+  <div class="about-background-decoration"></div>
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <div class="about-content-wrapper">
+          <!-- Header -->
+          <div class="text-center mb-5" data-sal="fade-up">
+            <span class="about-badge mb-3">À propos d'EVET</span>
+            <h2 class="about-title mb-4">Excellence et fiabilité à votre service</h2>
+            <p class="about-intro">
+              EVET est une entreprise spécialisée dans le commerce général et les prestations de service. Nous nous engageons à fournir des solutions de qualité supérieure adaptées à vos besoins.
+            </p>
+          </div>
+
+          <!-- Main Content Grid -->
+          <div class="row g-4 g-lg-5 mb-5">
+            <!-- Text Content -->
+            <div class="col-lg-6" data-sal="fade-up" data-sal-delay="100">
+              <div class="about-text-content">
+                <p class="about-description">
+                  Notre équipe met son savoir-faire au service de votre réussite. Nous combinons innovation, professionnalisme et engagement pour vous offrir des services qui répondent parfaitement à
+                  vos attentes.
+                </p>
+                <div class="about-highlight-box">
+                  <div class="highlight-icon">
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <div class="highlight-content">
+                    <h5 class="highlight-title">Notre engagement</h5>
+                    <p class="highlight-text">Des solutions sur mesure pour chaque projet, avec un accompagnement personnalisé et une qualité irréprochable.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Image -->
+            <div class="col-lg-6" data-sal="fade-up" data-sal-delay="200">
+              <div class="about-image-modern position-relative">
+                <div class="about-image-overlay"></div>
+                <div class="about-image-shape"></div>
+                <img src="{% static 'images/img1.webp' %}" alt="À propos d'EVET" class="img-fluid rounded-4 position-relative" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Features Grid -->
+          <div class="row g-4" data-sal="fade-up" data-sal-delay="300">
+            <div class="col-md-6 col-lg-3">
+              <div class="about-feature-card">
+                <div class="feature-icon-modern">
+                  <div class="feature-icon-bg-modern"></div>
+                  <i class="bi bi-award"></i>
+                </div>
+                <h5 class="feature-title-modern">Qualité certifiée</h5>
+                <p class="feature-text-modern">Standards élevés</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="about-feature-card">
+                <div class="feature-icon-modern">
+                  <div class="feature-icon-bg-modern"></div>
+                  <i class="bi bi-people"></i>
+                </div>
+                <h5 class="feature-title-modern">Équipe dédiée</h5>
+                <p class="feature-text-modern">Professionnels qualifiés</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="about-feature-card">
+                <div class="feature-icon-modern">
+                  <div class="feature-icon-bg-modern"></div>
+                  <i class="bi bi-clock-history"></i>
+                </div>
+                <h5 class="feature-title-modern">Réactivité</h5>
+                <p class="feature-text-modern">Réponse rapide</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="about-feature-card">
+                <div class="feature-icon-modern">
+                  <div class="feature-icon-bg-modern"></div>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h5 class="feature-title-modern">Satisfaction client</h5>
+                <p class="feature-text-modern">100% garantie</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="text-center mt-5" data-sal="fade-up" data-sal-delay="400">
+            <a href="{% url 'about' %}" class="btn btn-primary btn-lg rounded-pill px-5 about-cta-btn">
+              En savoir plus sur nous
+              <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-5 bg-primary text-white">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <div class="row g-4 text-center">
+          <div class="col-lg-3 col-md-6" data-sal="fade-up" data-sal-delay="100">
+            <div class="stat-item">
+              <div class="stat-icon mb-3">
+                <i class="bi bi-star-fill fs-1"></i>
+              </div>
+              <h2 class="display-4 fw-bold mb-2">100%</h2>
+              <p class="lead mb-0">Engagement qualité</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6" data-sal="fade-up" data-sal-delay="200">
+            <div class="stat-item">
+              <div class="stat-icon mb-3">
+                <i class="bi bi-clock-history fs-1"></i>
+              </div>
+              <h2 class="display-4 fw-bold mb-2">24/7</h2>
+              <p class="lead mb-0">Support disponible</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6" data-sal="fade-up" data-sal-delay="300">
+            <div class="stat-item">
+              <div class="stat-icon mb-3">
+                <i class="bi bi-speedometer2 fs-1"></i>
+              </div>
+              <h2 class="display-4 fw-bold mb-2">Rapide</h2>
+              <p class="lead mb-0">Réactivité garantie</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6" data-sal="fade-up" data-sal-delay="400">
+            <div class="stat-item">
+              <div class="stat-icon mb-3">
+                <i class="bi bi-star-fill fs-1"></i>
+              </div>
+              <h2 class="display-4 fw-bold mb-2">100%</h2>
+              <p class="lead mb-0">Satisfaction client</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="why-choose-section py-5 bg-light position-relative overflow-hidden">
+  <div class="why-choose-background"></div>
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <div class="text-center" data-sal="fade-up">
+          <span class="why-choose-badge mb-3">Pourquoi nous choisir</span>
+          <h2 class="why-choose-title mb-4">Votre succès, notre priorité</h2>
+          <p class="why-choose-description">Nous nous distinguons par notre engagement envers l'excellence et notre approche client centrée.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-gradient-primary text-white position-relative overflow-hidden">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <div class="text-center" data-sal="zoom-in">
+          <h2 class="display-4 fw-bold mb-4">Besoin d'une solution sur mesure ?</h2>
+          <p class="lead mb-5">Discutons de votre projet et découvrons ensemble comment EVET peut répondre à vos besoins en commerce général et prestations de service.</p>
+          <a href="{% url 'contact' %}" class="btn btn-light btn-lg rounded-pill px-5 py-3"> <i class="bi bi-chat-dots-fill me-2"></i>Demander un devis </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cta-shapes position-absolute">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+</section>
+
+{% include 'components/footer.html' %} {% endblock base %}

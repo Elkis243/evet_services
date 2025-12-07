@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemap (will be dynamically generated)
+Sitemap: https://evet.pythonanywhere.com/sitemap.xml
+
+# Disallow admin
+Disallow: /admin/
+
+# Disallow media files indexing (if needed)
+# Disallow: /media/
+

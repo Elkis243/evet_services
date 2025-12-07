@@ -1,0 +1,127 @@
+{% extends 'base.html' %} {% load static %} {% block extra_css %} {{ block.super }}
+<link href="{% static 'css/contact.css' %}" rel="stylesheet" />
+{% endblock extra_css %} {% block base %} {% include 'components/navbar.html' %}
+
+<!-- Messages -->
+{% if messages %}
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-8">
+      {% for message in messages %}
+      <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        <i class="bi bi-{% if message.tags == 'success' %}check-circle{% else %}exclamation-triangle{% endif %}-fill me-2"></i>
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<!-- Contact Hero Section -->
+<section class="contact-hero py-5 position-relative overflow-hidden" style="padding-top: 120px">
+  <div class="contact-hero-background"></div>
+  <div class="container py-4">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <div class="text-center" data-sal="fade-up">
+          <span class="contact-badge mb-3">Contactez-nous</span>
+          <h1 class="contact-title mb-4">Discutons de votre projet</h1>
+          <p class="contact-subtitle">Nous sommes là pour répondre à toutes vos questions et vous accompagner dans vos besoins en commerce général et prestations de service.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Form Section -->
+<section class="py-5">
+  <div class="container py-4">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <div class="contact-form-card" data-sal="fade-up">
+          <div class="contact-form-header text-center mb-4">
+            <div class="contact-form-icon-wrapper">
+              <i class="bi bi-envelope-paper-heart"></i>
+            </div>
+            <h2 class="contact-form-title">Envoyez-nous un message</h2>
+            <p class="contact-form-subtitle">Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.</p>
+          </div>
+
+          <form method="post" class="contact-form">
+            {% csrf_token %}
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="name" class="form-label-custom"> <i class="bi bi-person-fill me-2"></i>Nom complet </label>
+                  <input type="text" class="form-control-custom" id="name" name="name" placeholder="Votre nom complet" required />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="email" class="form-label-custom"> <i class="bi bi-envelope-fill me-2"></i>Email </label>
+                  <input type="email" class="form-control-custom" id="email" name="email" placeholder="votre@email.com" required />
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="subject" class="form-label-custom"> <i class="bi bi-tag-fill me-2"></i>Sujet </label>
+                  <input type="text" class="form-control-custom" id="subject" name="subject" placeholder="Sujet de votre message" required />
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="message" class="form-label-custom"> <i class="bi bi-chat-left-text-fill me-2"></i>Message </label>
+                  <textarea class="form-control-custom" id="message" name="message" rows="6" placeholder="Décrivez votre projet ou votre demande..." required></textarea>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-contact-submit w-100"><i class="bi bi-send-fill me-2"></i>Envoyer le message</button>
+              </div>
+            </div>
+          </form>
+
+          <!-- Contact Info -->
+          <div class="contact-info-section mt-5 pt-4">
+            <div class="row g-4 text-center">
+              <div class="col-md-4">
+                <div class="contact-info-item">
+                  <div class="contact-info-icon">
+                    <i class="bi bi-geo-alt-fill"></i>
+                  </div>
+                  <h5 class="contact-info-title">Adresse</h5>
+                  <p class="contact-info-text">126 B avenue Colonel Mondjiba<br />Q. Basoko Kinshasa</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="contact-info-item">
+                  <div class="contact-info-icon">
+                    <i class="bi bi-telephone-fill"></i>
+                  </div>
+                  <h5 class="contact-info-title">Téléphone</h5>
+                  <p class="contact-info-text">
+                    <a href="tel:+243839302367" class="contact-info-link">+243 839 302 367</a>
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="contact-info-item">
+                  <div class="contact-info-icon">
+                    <i class="bi bi-envelope-fill"></i>
+                  </div>
+                  <h5 class="contact-info-title">Email</h5>
+                  <p class="contact-info-text">
+                    <a href="mailto:contact@evet.com" class="contact-info-link">contact@evet.com</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include 'components/footer.html' %} {% endblock base %}

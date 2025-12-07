@@ -1,0 +1,35 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container px-3 px-md-4">
+    <!-- Logo -->
+    <a href="{% url 'home' %}" class="navbar-brand px-3 px-md-5">
+      <img src="{% static 'images/logo.png' %}" alt="EVET Logo" height="50" width="auto" class="navbar-logo-img" />
+    </a>
+
+    <!-- Toggle Button -->
+    <button class="navbar-toggler px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navigation -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-center px-2 px-md-3">
+        <li class="nav-item">
+          <a class="nav-link {% if page == 'Home' %}active{% endif %}" href="{% url 'home' %}"> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'home' %}#services"> Services </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if page == 'About' %}active{% endif %}" href="{% url 'about' %}"> À propos </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if page == 'Contact' %}active{% endif %}" href="{% url 'contact' %}"> Contact </a>
+        </li>
+        <li class="nav-item ms-lg-3 px-2">
+          <a href="{% url 'contact' %}" class="btn btn-primary rounded-pill px-4"> Demander un devis </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

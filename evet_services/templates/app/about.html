@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+  {{ block.super }}
+  <link href="{% static 'css/about.css' %}" rel="stylesheet" />
+{% endblock extra_css %}
+
+{% block base %}
+  {% include 'components/navbar.html' %}
+
+  <!-- About Page Hero -->
+  <section class="about-page-hero py-5 position-relative overflow-hidden" style="padding-top: 120px;">
+    <div class="about-hero-background"></div>
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+          <div class="text-center" data-sal="fade-up">
+            <span class="about-page-badge mb-3">À propos d'EVET</span>
+            <h1 class="about-page-title mb-4">Excellence et fiabilité à votre service</h1>
+            <p class="about-page-subtitle">
+              EVET est une entreprise spécialisée dans le commerce général et les prestations de service, engagée à fournir des solutions de qualité supérieure adaptées à vos besoins.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+          <div class="about-mission-card">
+            <div class="mission-icon-wrapper">
+              <div class="mission-icon-bg"></div>
+              <i class="bi bi-bullseye"></i>
+            </div>
+            <h2 class="mission-title">Notre Mission</h2>
+            <p class="mission-text">
+              Offrir des solutions professionnelles en commerce général et prestations de service, en combinant innovation, professionnalisme et engagement pour répondre parfaitement aux attentes de nos clients.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="py-5 bg-light">
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+          <div class="text-center mb-5" data-sal="fade-up">
+            <h2 class="values-title mb-4">Nos Valeurs</h2>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6" data-sal="fade-up" data-sal-delay="100">
+              <div class="value-card">
+                <div class="value-icon">
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <h4 class="value-title">Excellence</h4>
+                <p class="value-text">Nous visons l'excellence dans chaque projet et maintenons les plus hauts standards de qualité.</p>
+              </div>
+            </div>
+            <div class="col-md-6" data-sal="fade-up" data-sal-delay="200">
+              <div class="value-card">
+                <div class="value-icon">
+                  <i class="bi bi-shield-check"></i>
+                </div>
+                <h4 class="value-title">Fiabilité</h4>
+                <p class="value-text">Nous respectons nos engagements et garantissons la fiabilité de nos services.</p>
+              </div>
+            </div>
+            <div class="col-md-6" data-sal="fade-up" data-sal-delay="300">
+              <div class="value-card">
+                <div class="value-icon">
+                  <i class="bi bi-speedometer2"></i>
+                </div>
+                <h4 class="value-title">Réactivité</h4>
+                <p class="value-text">Nous réagissons rapidement à vos besoins et adaptons nos solutions en conséquence.</p>
+              </div>
+            </div>
+            <div class="col-md-6" data-sal="fade-up" data-sal-delay="400">
+              <div class="value-card">
+                <div class="value-icon">
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h4 class="value-title">Engagement</h4>
+                <p class="value-text">Nous nous engageons pleinement dans chaque projet pour votre satisfaction.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+          <div class="about-cta-box text-center" data-sal="fade-up">
+            <h3 class="cta-title mb-3">Prêt à travailler avec nous ?</h3>
+            <p class="cta-text mb-4">Discutons de votre projet et découvrons comment EVET peut répondre à vos besoins.</p>
+            <a href="{% url 'contact' %}" class="btn btn-primary btn-lg rounded-pill px-5">
+              <i class="bi bi-chat-dots-fill me-2"></i>Nous contacter
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include 'components/footer.html' %}
+{% endblock base %}
