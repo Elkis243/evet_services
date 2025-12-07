@@ -37,6 +37,18 @@
   align-items: center;
 }
 
+@media (min-width: 768px) {
+  .navbar-brand {
+    padding-left: 2.5rem !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-brand {
+    padding-left: 3.5rem !important;
+  }
+}
+
 .navbar-brand:hover {
   transform: scale(1.05);
 }
