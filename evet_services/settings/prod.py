@@ -4,7 +4,7 @@ import os
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 SECRET_KEY = os.getenv("SECRET_KEY")
-ALLOWED_HOSTS = ["evetservices.pythonanywhere.com"]
+ALLOWED_HOSTS = ["www.evet-services.com", "evet-services.com"]
 
 SECURE_HSTS_SECONDS = int(os.getenv("SECURE_HSTS_SECONDS"))
 SECURE_HSTS_INCLUDE_SUBDOMAINS = os.getenv("SECURE_HSTS_INCLUDE_SUBDOMAINS") == "True"
@@ -13,7 +13,7 @@ SECURE_SSL_REDIRECT = os.getenv("SECURE_SSL_REDIRECT") == "True"
 
 SESSION_COOKIE_SECURE = os.getenv("SESSION_COOKIE_SECURE") == "True"
 CSRF_COOKIE_SECURE = os.getenv("CSRF_COOKIE_SECURE") == "True"
-CSRF_TRUSTED_ORIGINS = ["https://evetservices.pythonanywhere.com"]
+CSRF_TRUSTED_ORIGINS = ["https://www.evet-services.com", "https://evet-services.com"]
 
 X_FRAME_OPTIONS = os.getenv("X_FRAME_OPTIONS")
 SECURE_BROWSER_XSS_FILTER = os.getenv("SECURE_BROWSER_XSS_FILTER") == "True"

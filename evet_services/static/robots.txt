@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap (will be dynamically generated)
-Sitemap: https://evetservices.pythonanywhere.com/sitemap.xml
+Sitemap: https://www.evet-services.com/sitemap.xml
 
 # Disallow admin
 Disallow: /admin/
