@@ -14,22 +14,22 @@
     <!-- Navigation -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto align-items-center px-2 px-md-3">
-        <li class="nav-item">
+          <li class="nav-item">
           <a class="nav-link {% if page == 'Home' %}active{% endif %}" href="{% url 'home' %}"> Home</a>
-        </li>
-        <li class="nav-item">
+          </li>
+          <li class="nav-item">
           <a class="nav-link" href="{% url 'home' %}#services"> Services </a>
-        </li>
-        <li class="nav-item">
+          </li>
+          <li class="nav-item">
           <a class="nav-link {% if page == 'About' %}active{% endif %}" href="{% url 'about' %}"> À propos </a>
-        </li>
-        <li class="nav-item">
+          </li>
+            <li class="nav-item">
           <a class="nav-link {% if page == 'Contact' %}active{% endif %}" href="{% url 'contact' %}"> Contact </a>
         </li>
         <li class="nav-item ms-lg-3 px-2">
           <a href="{% url 'contact' %}" class="btn btn-primary rounded-pill px-4"> Demander un devis </a>
-        </li>
-      </ul>
+            </li>
+        </ul>
     </div>
   </div>
 </nav>
