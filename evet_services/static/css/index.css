@@ -395,6 +395,52 @@
   border-color: rgba(252, 105, 46, 0.2);
 }
 
+.service-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #fc692e 0%, #e55a1f 100%);
+}
+
+.service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card-modern:hover .service-image {
+  transform: scale(1.1);
+}
+
+.service-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+  z-index: 1;
+  transition: opacity 0.4s ease;
+}
+
+.service-card-modern:hover .service-image-overlay {
+  opacity: 0.7;
+}
+
+.service-image-wrapper .service-number {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 4rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.15);
+  line-height: 1;
+  z-index: 2;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
 .service-card-inner {
   padding: 2.5rem;
   position: relative;
@@ -468,9 +514,9 @@
 
 .service-description {
   color: #6c757d;
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
-  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  font-size: 0.85rem;
 }
 
 .service-features {
@@ -534,6 +580,10 @@
 }
 
 @media (max-width: 767.98px) {
+  .service-image-wrapper {
+    height: 180px;
+  }
+
   .service-card-inner {
     padding: 2rem 1.5rem;
   }
@@ -548,6 +598,12 @@
   }
 
   .service-number {
+    font-size: 3rem;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .service-image-wrapper .service-number {
     font-size: 3rem;
     top: 1rem;
     right: 1rem;
@@ -824,6 +880,39 @@
 }
 
 /* Stats Section */
+.stats-section-with-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/img5.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.stats-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+
+.stats-section-with-image .container {
+  position: relative;
+  z-index: 2;
+}
+
 .stat-item {
   padding: 2rem 1rem;
 }

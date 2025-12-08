@@ -55,14 +55,14 @@
           <!-- Service 1 -->
           <div class="col-lg-4 col-md-6" data-sal="fade-up" data-sal-delay="100">
             <div class="service-card-modern h-100 position-relative">
-              <div class="service-card-inner">
+              <div class="service-image-wrapper">
+                <img src="{% static 'images/img2.webp' %}" alt="Commerce général" class="service-image" />
+                <div class="service-image-overlay"></div>
                 <div class="service-number">01</div>
-                <div class="service-icon-modern">
-                  <div class="service-icon-bg"></div>
-                  <i class="bi bi-shop"></i>
-                </div>
+              </div>
+              <div class="service-card-inner">
                 <h3 class="service-title-modern">Commerce général</h3>
-                <p class="service-description">Distribution et vente de produits divers pour répondre à tous vos besoins commerciaux avec une approche professionnelle et fiable.</p>
+                <p class="service-description">Distribution et vente de produits avec une approche professionnelle.</p>
                 <div class="service-features">
                   <div class="service-feature-item">
                     <i class="bi bi-check-circle-fill"></i>
@@ -89,14 +89,14 @@
           <!-- Service 2 -->
           <div class="col-lg-4 col-md-6" data-sal="fade-up" data-sal-delay="200">
             <div class="service-card-modern h-100 position-relative">
-              <div class="service-card-inner">
+              <div class="service-image-wrapper">
+                <img src="{% static 'images/img3.webp' %}" alt="Prestations de service" class="service-image" />
+                <div class="service-image-overlay"></div>
                 <div class="service-number">02</div>
-                <div class="service-icon-modern">
-                  <div class="service-icon-bg"></div>
-                  <i class="bi bi-briefcase"></i>
-                </div>
+              </div>
+              <div class="service-card-inner">
                 <h3 class="service-title-modern">Prestations de service</h3>
-                <p class="service-description">Services professionnels sur mesure pour accompagner votre entreprise dans tous ses projets avec expertise et réactivité.</p>
+                <p class="service-description">Services professionnels sur mesure avec expertise et réactivité.</p>
                 <div class="service-features">
                   <div class="service-feature-item">
                     <i class="bi bi-check-circle-fill"></i>
@@ -123,14 +123,14 @@
           <!-- Service 3 -->
           <div class="col-lg-4 col-md-6" data-sal="fade-up" data-sal-delay="300">
             <div class="service-card-modern h-100 position-relative">
-              <div class="service-card-inner">
+              <div class="service-image-wrapper">
+                <img src="{% static 'images/img4.webp' %}" alt="Conseil Professionnel" class="service-image" />
+                <div class="service-image-overlay"></div>
                 <div class="service-number">03</div>
-                <div class="service-icon-modern">
-                  <div class="service-icon-bg"></div>
-                  <i class="bi bi-headset"></i>
-                </div>
+              </div>
+              <div class="service-card-inner">
                 <h3 class="service-title-modern">Conseil Professionnel</h3>
-                <p class="service-description">Expertise et accompagnement stratégique pour optimiser vos opérations et développer votre activité avec des solutions innovantes.</p>
+                <p class="service-description">Expertise et accompagnement stratégique avec des solutions innovantes.</p>
                 <div class="service-features">
                   <div class="service-feature-item">
                     <i class="bi bi-check-circle-fill"></i>
@@ -264,8 +264,10 @@
 </section>
 
 <!-- Stats Section -->
-<section class="py-5 bg-primary text-white">
-  <div class="container py-5">
+<section class="stats-section-with-image py-5 text-white position-relative">
+  <div class="stats-background-image"></div>
+  <div class="stats-overlay"></div>
+  <div class="container py-5 position-relative">
     <div class="row justify-content-center">
       <div class="col-12 col-md-10 col-lg-8">
         <div class="row g-4 text-center">
