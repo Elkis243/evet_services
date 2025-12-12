@@ -1,12 +1,9 @@
 User-agent: *
-Allow: /
 
-# Sitemap (will be dynamically generated)
+Allow: /favicon.ico
+
+Allow: /static/
+
+Disallow:
+
 Sitemap: https://www.evet-services.com/sitemap.xml
-
-# Disallow admin
-Disallow: /admin/
-
-# Disallow media files indexing (if needed)
-# Disallow: /media/
-

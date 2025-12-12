@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.conf import settings
 import os
+from django.http import FileResponse
 
 
 def home(request):
@@ -57,16 +58,14 @@ def robots_txt(request):
     base_url = f"{protocol}://{host}"
 
     robots_content = f"""User-agent: *
-Allow: /
 
-# Sitemap
+Allow: /favicon.ico
+
+Allow: /static/
+
+Disallow:
+
 Sitemap: {base_url}/sitemap.xml
-
-# Disallow admin
-Disallow: /admin/
-
-# Disallow media files indexing (if needed)
-# Disallow: /media/
 """
     return HttpResponse(robots_content, content_type="text/plain")
 
@@ -103,3 +102,8 @@ def sitemap_xml(request):
 </urlset>"""
 
     return HttpResponse(sitemap, content_type="application/xml")
+
+
+def favicon_view(request):
+    favicon_path = os.path.join(settings.STATIC_ROOT, "favicon.ico")
+    return FileResponse(open(favicon_path, "rb"), content_type="image/x-icon")
